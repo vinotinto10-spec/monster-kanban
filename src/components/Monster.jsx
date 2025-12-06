@@ -38,6 +38,8 @@ export default function Monster({ color, height = "h-24" }) {
     if (el && !pupilsRef.current.includes(el)) pupilsRef.current.push(el);
   };
 
+  
+
   return (
     <div
       className={`${color} ${height} relative rounded-t-full rounded-b-md flex justify-center items-start pt-2 mb-4`}
@@ -63,6 +65,24 @@ export default function Monster({ color, height = "h-24" }) {
             className="absolute w-2 h-2 bg-black rounded-full top-1.5 left-1.5 transition-transform duration-75 ease-linear"
           />
         </div>
+			
+		{/*mouth*/}
+		<div
+			className = "absolute w-12 h-1 bg-black bottom-4"
+			>
+			</div>
+
+			<div
+			className = "absolute w-7 h-1 bg-black bottom-1"
+			>
+			</div>
+
+			{/*eyebrow*/}
+			<div
+			className = "absolute w-5 h-1 bg-black rounded-full slanted"
+			>
+			</div>
+
       </div>
     </div>
   );
